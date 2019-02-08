@@ -2,10 +2,13 @@
 	<head>
 		<title> Derek Abernethy's Webpage</title>
 
+<!-- the table in the styles allows a table to be created with a black 1pixel border -->
 		<style>
 			table,th,td{border:1px solid black}
 		</style>
 
+<!-- what goes on in the script uses the input values of "Name" and "Email" and associates them with text values of value and value2
+where a popup alert will be displayed once the button defined below as been hit; the pop up will display what is written below -->
 		<script>
 		function Submit()
 		{
@@ -17,28 +20,40 @@
 	<head/>
 
 
-
+<!-- this is what will be displayed-->
 	<body>
+<!-- Ive decided to make one big table (100% of the screen) where one column will contain all my information (left)
+and the other column (right) will contain my image -->
+<!-- <td> defines the begining of the first column (left) of the big table-->
 	<table style="width:100%">
 	<td>
 	<h2> Derek Abernethy <h2>
 
+<!-- style in heading three changes the background colour of the heading along with the swritting in it -->
+<!-- <span> allows to change text characteristics mid text with 'style' such as colour and font -->
 	<h3 style="background-color:SkyBlue; color:SlateBlue"> About</h3>
 	4th year Geomatics Engineering student at York University  </br>
 	And I <span style="color:Crimson; font-family: Comic Sans MS">LOVE</span> GIS and Data Integration with <span style="color: SlateBlue">Professor Guhno!!</span>
 
 	<h3 style="background-color:SkyBlue; color:SlateBlue"> Courses </h3>
 	<p> Here are some of the course I've taken to date: </p>
+
+<!-- here is the begining of the second table which will contain all my school info;
+this table is in one of the columns of the big table; its width is 60% of one of the cells in the big table -->
 	<table style="width:60%";>
+<!-- <tr>...</tr> generates a row where we can further add cells per row -->
+<!-- <th> makes the text bolded ; note there are three <th></th>, this generates three cells per row (so 3 columns)-->
+<!-- <td> generate unbolded text for the cell; three so three cells-->
+<!-- in <td> the style of the cells can be changed by changing the background and font of text for each cell by using 'style'-->
  <tr>
 	 <th>Course Number</th>
 	 <th>Course Title</th>
 	 <th>Semester Taken</th>
  </tr>
  <tr>
-	  <td> </td>
-	 <th>For Credit - Previous Courses</th>
-	  <td> </td>
+	 <td> </td>
+	 <th align="centre">For Credit - Previous Courses</th>
+	 <td> </td>
  </tr>
  <tr>
 	 <td style="background-color:LightGrey; color:SlateBlue">ESSE 4640</td>
@@ -89,8 +104,10 @@
 	 <td>GIS</td>
 	 <td>Winter 2019</td>
  </tr>
+ <!-- close of smaller table for my courses-->
 	</table>
 
+<!-- list of my interest with different fonts-->
 	<h3 style="background-color:SkyBlue; color:SlateBlue"> Interests </h3>
 	I enjoy any outdoor activities, such as the following: </br>
 	<span style="font-style: italic">- hunting</span> </br>
@@ -100,6 +117,9 @@
 	<span style="font-family: Lucida Console">- travelling</span>
 
 	<h3 style="background-color:SkyBlue; color:SlateBlue"> Subscribe to my newsletter </h3>
+<!-- Here ive made two boxes for input of information and one button for subscription-->
+<!-- here we give the inputs an id of Name and Email which are used in the script section
+and on the click of a button they get a confirmation -->
 	<p> Want a newsletter? Subscribe by filling out information below! </p>
 	Name: <input type="text" id="Name" />
 	</br>
@@ -107,7 +127,7 @@
 	</br>
 	<button type="button" onclick="Submit()"> Submit </button>
   </td>
-
+<!-- up top is the closing of the first cell from the big table, below is the beginning of the second cell from the big table which contains my image-->
 	<td>
 		<img src="Me.jpg" style = "width:379.5px; height:506px">
 	</td>
